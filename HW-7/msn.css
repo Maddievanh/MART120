@@ -1,0 +1,27 @@
+div {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: darkred;
+
+}
+span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 207);
+    font-size: x-large;
+}
+
+.myClass{
+    font-size: xx-large;
+    color: rgb(123, 255, 0);
+    font-weight: bolder;
+}
+
+#myID{
+    font-size: xx-large;
+    font-family: fantasy;
+    color: darkorange;
+    font-weight: bolder;
+}
+
+body{
+    background-image: url("dudley.jpg");
+}
