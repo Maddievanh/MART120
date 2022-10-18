@@ -2,9 +2,9 @@
     <title>Third page</title>
     <head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script>
-        function checkboxes()
-        {
-            var firstName = document.getElementById("fName").value;
+       function checkboxes()
+    {
+        var FirstName = document.getElementById("FName").value;
     if(firstName == "") 
     {
         document.getElementById("fName").focus();
@@ -12,8 +12,9 @@
         document.getElementById("fNameMessage").innerHTML = "Required";
 
     }
+       
         
-        }
+    }
     function checkboxes()
     {
         var lastName = document.getElementById("lName").value;
@@ -27,34 +28,41 @@
        
         
     }
+    function checkboxes()
+    {
+        var eMail = document.getElementById("eMail").value;
+    if(emailAddress == "") 
+    {
+        document.getElementById("eMail").focus();
+        document.getElementById("eMail").style.backgroundColor= "red"; 
+        document.getElementById("eMailMessage").innerHTML = "Required";
+
+    }
+       
+        
+    }
 
     </script>
     
-    
-    
     </head>
-
-
-
 
     <body>
         <h1>Contact Us!</h1>
         <p></p>
-        <form action="">
-            <p>First name: <input type="text" id="fName">&nbsp;<span id="fNameMessage"></span></p>
+
+                <p>First name: <input type="text" id="fName">&nbsp;<span id="fNameMessage"></span></p>
                 <p>Last name: <input tpye="text" id="lName">&nbsp;<span id="lNameMessage"></span></p>
-                <p>Email Address: <input type="text" id="email"></p>
+                <p>Email Address: <input type="text" id="eMail">&nbsp;<span id="eMailMessage"></span></p>
                 <button id= "btnSubmit" class="btn btn-primary" onclick="checkboxes();" >Submit My Info</button>
                 <br />
                 <h2>Do you accept the terms of agreement?</h2>
                 <p>you must click yes, those are the terms</p>
                 <input type="checkbox" name="yes"value="yes">yes<br>
                 <input type="checkbox" name="no"value="no">no<br>
-                </form>
                 <br />
                 <p><a href="Firstpage.html">First page</a></p>
                     <p><a href="secondpage.html">Go to second page</a></p>
 
-                </form>
+                
     </body>
 </html>
