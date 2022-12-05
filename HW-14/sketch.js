@@ -65,7 +65,7 @@ function draw()
 
 fill(200,300,34); 
     for(var i = 0; i < myXs.length; i++) {
-        circle(myXs[i], myYs[i], diameters[i]); 
+        square(myXs[i], myYs[i], diameters[i]); 
         myXSpeeds[i]= Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
         myYSpeeds[i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
     }
