@@ -19,14 +19,15 @@ var myXs = [];
 var myYs = []; 
 var diameters = []; 
 
-var shapeXSpeeds = []; 
-var shapeYSpeeds; []; 
+var myXSpeeds = []; 
+var myYSpeeds = []; 
 
 
 //when mouse is clicked; 
 
 var mouseShapeX; 
 var mouseShapeY; 
+
 function setup()
 {
     createCanvas(700,700);
@@ -70,20 +71,20 @@ fill(200,300,34);
         myYSpeeds[i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
     }
    // move the shape
-   myXs[i] += shapeXSpeeds[i];
-   myYs[i] += shapeYSpeeds[i];
+   myXs[i] += myXSpeeds[i];
+   myYs[i] += myYSpeeds[i];
    // check to see if the shape has gone out of bounds
-   if (shapeXs[i] > width) {
-       shapeXs[i] = 0;
+   if (myXs[i] > width) {
+       myXs[i] = 0;
    }
-   if (shapeXs[i] < 0) {
-       shapeXs[i] = width;
+   if (myXs[i] < 0) {
+       myXs[i] = width;
    }
-   if (shapeYs[i] > height) {
-       shapeYs[i] = 0;
+   if (myYs[i] > height) {
+       myYs[i] = 0;
    }
-   if (shapeYs[i] < 0) {
-       shapeYs[i] = height;
+   if (myYs[i] < 0) {
+       myYs[i] = height;
 }
 
 }
