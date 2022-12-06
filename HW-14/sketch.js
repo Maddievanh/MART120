@@ -22,6 +22,7 @@ var diameters = [];
 var myXSpeeds = []; 
 var myYSpeeds = []; 
 
+var rgb = [];
 
 //when mouse is clicked; 
 
@@ -31,7 +32,8 @@ var mouseShapeY;
 function setup()
 {
     createCanvas(700,700);
-   
+
+
     
     for (var i = 0; i <5; i++){
         myXSpeeds[i]= Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
@@ -40,6 +42,16 @@ function setup()
         myYs[i] = getRandomNumber(500)
         diameters[i]= getRandomNumber (25); 
     }
+
+
+    for(var i = 0; i < 5; i++){
+        rgb.push(Math.floor(Math.random() * 255));
+    }
+    
+
+
+
+
     createCharacter(100,76); 
 }
 
@@ -60,16 +72,15 @@ function draw()
 
     createBorders(); 
 
-    mouseClicked(); 
     
 
 
-fill(200,300,34); 
     for(var i = 0; i < myXs.length; i++) {
         square(myXs[i], myYs[i], diameters[i]); 
         myXSpeeds[i]= Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
         myYSpeeds[i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
-    }
+        
+    
    // move the shape
    myXs[i] += myXSpeeds[i];
    myYs[i] += myYSpeeds[i];
@@ -85,8 +96,19 @@ fill(200,300,34);
    }
    if (myYs[i] < 0) {
        myYs[i] = height;
+   }
+
 }
 
+if(characterX <=0  && characterY <= 700)
+        {
+            stroke(2);
+            textSize(20);
+            text("Winner!", width/2-50, height/2-50);
+        }   
+
+        fill(100,0,0);
+    square(mouseShapeX,mouseShapeY,20); 
 }
 
 function drawText2() 
@@ -149,29 +171,17 @@ else if(keyIsDown(d)) {
 
 
 
-//mouse pressed shape
-function drawShape()
-{
-    fill(100,0,0);
-    square(mouseShapeX,mouseShapeY,20 );
-}
+
 
 function mouseClicked()
 {
     mouseShapeX = mouseX
     mouseShapeY = mouseY
-    mouseX, mouseY, 25
+
 }
 
 
-function drawText()
-{
-if(characterX <=0  && characterY <= 700)
-{
-    stroke(2);
-    textSize(20);
-    text("Winner!", width/2-50, height/2-50);
-}
-
-}
+function getRandomNumber(number) {
+    return Math.floor(Math.random() * number) + 10;
+} 
 
